@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up</title>
+    <style>
+        body{
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .signup-container{
+            margin: 20px 20px;
+        }
+        .signup-container div{
+            margin-bottom: 10px;
+        }
+        
+        #signup-button{
+            background-color: rgb(97, 171, 240);
+            width: 200px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+        }
+        #signin-link{
+            text-decoration: none;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="signup-container">
+        <h2>Sign up</h2>
+      <div>
+        <label for="name">Name</label>
+        <br>
+        <input type="text" placeholder="Enter your name" id="name-input"/>
+      </div>
+      <div>
+        <label for="surname">Surname</label>
+        <br>
+        <input type="text" placeholder="Enter your surname" id="surname-input"/>
+      </div>
+      <div>
+        <label for="industry">What industry of work are you in?</label>
+        <br>
+        <select id="industry-dropdown">
+            <option value="" disabled selected>Choose</option>
+            <option value="technology">Technology</option>
+            <option value="logistics">Logistics</option>
+            <option value="law">Law</option>
+        </select>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <br>        
+        <input type="text" placeholder="Enter your email" id="email-input">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <br>
+        <input type="text" placeholder="Enter your password" id="password-input">
+      </div>
+      <div>
+        <label for="confirmpassword">Confirm Password</label>
+        <br>
+        <input type="text" placeholder="Confirm your password" id="confirmpassword-input">
+      </div>
+      <div>
+          <input type="checkbox" id="showpassword-checkbox">
+          <label for="showPasswordCheckbox">Show Password</label>
+      </div>
+      <button id="signup-button">Sign up</button>
+      <div>
+        <p>Already have an account? <a href="#sign-in" id="signin-link">Sign in</a></p>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-29T00:58:16.524765" rpa="false" schemaversion="5">
+<suite id="s1" name="isDisable" source="C:\Users\LENOVO\Desktop\Tutorials\Robotframework\Tests\isDisable.robot">
+<test id="s1-t1" name="Verify Assess Button is Disabled for NAME = “BBB” and CLASS = “abc”" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-29T00:58:16.946884" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5500/Tests/assess.html'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T00:58:16.946884" elapsed="3.202297"/>
+</kw>
+<kw name="Checking “Assess” button that NAME = “BBB” and CLASS = “abc” is disabled">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
+<msg time="2024-01-29T00:58:20.381857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-29T00:58:20.381857" level="FAIL">Element 'xpath=//td[@class='table-user' and contains(text(),'BBB')]/following-sibling::td[@class='table-class' and contains(text(),'abc')]/following-sibling::td[@class='table-button']//button[@class='table-assess']' is enabled.</msg>
+<arg>${BBBAssessButtonXPath}</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="FAIL" start="2024-01-29T00:58:20.152792" elapsed="0.233428">Element 'xpath=//td[@class='table-user' and contains(text(),'BBB')]/following-sibling::td[@class='table-class' and contains(text(),'abc')]/following-sibling::td[@class='table-button']//button[@class='table-assess']' is enabled.</status>
+</kw>
+<msg time="2024-01-29T00:58:20.387232" level="INFO">${isDisabled} = False</msg>
+<var>${isDisabled}</var>
+<arg>Element Should Be Disabled</arg>
+<arg>${BBBAssessButtonXPath}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-01-29T00:58:20.152792" elapsed="0.234440"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-29T00:58:20.387232" level="INFO">Is Assess Button Disabled? False</msg>
+<arg>Is Assess Button Disabled? ${isDisabled}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-29T00:58:20.387232" elapsed="0.001310"/>
+</kw>
+<status status="PASS" start="2024-01-29T00:58:20.151703" elapsed="0.236839"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-29T00:58:20.388542" elapsed="2.253545"/>
+</kw>
+<status status="PASS" start="2024-01-29T00:58:16.943877" elapsed="5.698210"/>
+</test>
+<status status="PASS" start="2024-01-29T00:58:16.526288" elapsed="6.117821"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="isDisable">isDisable</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
