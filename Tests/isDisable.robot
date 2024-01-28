@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-# ${URL}: This variable stores the URL
+# ${URL}: This variable stores the URL , (I ran it on my local computer.)
 ${URL}      http://127.0.0.1:5500/Tests/assess.html
 
 #${BBBAssessButtonXPath}: This variable stores an XPath expression that identifies the "Assess" button with the row where the user is "BBB" and the class is "abc" in a table.
