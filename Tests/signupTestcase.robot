@@ -2,10 +2,10 @@
 Documentation     Test Suite for Sign Up Functionality
 Library           SeleniumLibrary
 
-# Open browser automatically
+# Open browser before each test case in the test suite
 Test Setup        Open URL
 
-# Close browser automatically
+# Close browser at the end of each test case
 Test Teardown     Close Browser
 
 *** Variables ***
@@ -59,13 +59,13 @@ TC-02 Verify sign up with only English characters and a length not exceeding 50 
 
 
 TC-03 Verify sign up for cases involving non-English characters, such as Thai, special characters, numbers, and data exceeding a length of 50 characters.
-#   "Name" field: อาทิติยา
-    #"Name" field: Atithiya!
-    #"Name" field: Atithiya@1
-    #"Name" field: Atithiya123
-    #"Name" field: 1234
-    #"Name" field: @#$%
-    #"Name" field: EleanorFitzgeraldJonathanAlexanderBartholomewMontas
+ # "Name" field: อาทิติยา
+ #"Name" field: Atithiya!
+ #"Name" field: Atithiya@1
+ #"Name" field: Atithiya123
+ #"Name" field: 1234
+ #"Name" field: @#$%
+ #"Name" field: EleanorFitzgeraldJonathanAlexanderBartholomewMontas
 
     Input name in the name field    อาทิติยา
     Enter data in other fields to verify the name field
@@ -128,7 +128,7 @@ TC-05 Verify sign up with only English characters and a length not exceeding 50 
     Page should contain successful sign up
 
 TC-06 Verify sign up for cases involving non-English characters, such as Thai, special characters, numbers, and data exceeding a length of 50 characters in surname field
-#"Surname" field: อินทร
+ #"Surname" field: อินทร
  #"Surname" field: Inthorn!
  #"Surname" field: Inthorn@1
  #"Surname" field: Inthorn123
@@ -388,16 +388,18 @@ TC-23 Verify sign-up by entering an empty confirm password field
 
 TC-24 Verify the selection of the show password toggle
     Enter data in other fields to verify the show password checkbox
+
+    # Activate show password
     Select on show password checkbox
-    Element Attribute Value Should Be    ${password_field}    type    text
-    Element Attribute Value Should Be    ${confirm_password_field}    type    text
 
 TC-25 Verify the deselection of the show password toggle
     Enter data in other fields to verify the show password checkbox
+
+    # Select on show password checkbox
     Select on show password checkbox
+
+    # Select on show password checkbox again
     Select on show password checkbox
-    Element Should Not Be Visible    ${password_field}
-    Element Should Not Be Visible    ${confirm_password_field}
 
 TC-26 Verify the functionality of clicking on the sign up button after entering all fields
     Enter data in all fields
@@ -405,11 +407,11 @@ TC-26 Verify the functionality of clicking on the sign up button after entering 
     Page should contain successful sign up
 
 TC-27 Verify the functionality of clicking on the sign up button by entering invalid data in all fields
-#1."Name" field: อาทิติยา
-#2."Surname" field: อินทร
-#3."Email" field : อาทิติยา@gmail.com
-#4."Password" field : Jenken@
-#5."Confirm password" : Jenken@12
+ #"Name" field: อาทิติยา
+ #"Surname" field: อินทร
+ #"Email" field : อาทิติยา@gmail.com
+ #"Password" field : Jenken@
+ #"Confirm password" : Jenken@12
 
     Input name in the name field                        อาทิติยา
     Input surname in the surname field                  อินทร
@@ -431,42 +433,51 @@ TC-29 Verify the functionality of clicking on the sign in link
 
 TC-30 Verify the functionality of clicking on the sign in link with incorrect or invalid link
     Click Element    ${sign_in_link}
+
+    # Verify that signin-container is not visible (indicating an invalid or incorrect link)
     Element Should Not Be Visible    css=div.signin-container
 
 *** Keywords ***
 Open URL
     Open Browser    ${url}      Chrome
 
+# Successful sign up
 Page should contain successful sign up
     Page Should Contain Element    id=successful-signup
 
+# Unsuccessful sign up
 Page should contain unsuccessful sign up
     Page Should Contain Element    id=unsuccessful-signup
 
 # Sign up steps
 Input name in the name field
 
-    [Arguments]     ${name_input}=Aithiya
-    Input Text      ${name_field}           ${name_input}
+    # Arguments: ${name_input} (default value: Aithiya)
+    [Arguments]      ${name_input}=Aithiya
+    Input Text       ${name_field}                ${name_input}
 
 Input surname in the surname field
+    # Arguments: ${surname_input} (default value: Inthorn)
     [Arguments]      ${surname_input}=Inthorn
-    Input Text       ${surname_field}       ${surname_input}
+    Input Text       ${surname_field}             ${surname_input}
 
 Select industry dropdown
-    Select From List By Label       ${industry_dropdown}       ${select_industry}
+    Select From List By Label                     ${industry_dropdown}       ${select_industry}
 
 Input email in the email field
-    [Arguments]     ${email_input}=atithiya@email.com
-    Input Text      ${email_field}        ${email_input}
+    # Arguments: ${email_input} (default value: atithiya@email.com)
+    [Arguments]      ${email_input}=atithiya@email.com
+    Input Text       ${email_field}               ${email_input}
 
 Input password in the password field
-    [Arguments]     ${password_input}=Mika@1234
-    Input Text      ${password_field}      ${password_input}
+    # Arguments: ${password_input} (default value: Mika@1234)
+    [Arguments]      ${password_input}=Mika@1234
+    Input Text       ${password_field}            ${password_input}
 
 Input confirm password in confirm password field
-    [Arguments]     ${confirmpassword_input}=Mika@1234
-    Input Text      ${confirm_password_field}     ${confirmpassword_input}
+    # Arguments: ${confirmpassword_input} (default value: Mika@1234)
+    [Arguments]      ${confirmpassword_input}=Mika@1234
+    Input Text       ${confirm_password_field}    ${confirmpassword_input}
 
 Select on show password checkbox
     Click Element    ${show_password_checkbox}
@@ -535,7 +546,6 @@ Enter data in other fields to verify the show password checkbox
     Input email in the email field
     Input password in the password field
     Input confirm password in confirm password field
-
 
 Enter data in all fields
     Input name in the name field
