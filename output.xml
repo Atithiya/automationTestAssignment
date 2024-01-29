@@ -1,54 +1,775 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-29T00:58:16.524765" rpa="false" schemaversion="5">
-<suite id="s1" name="isDisable" source="C:\Users\LENOVO\Desktop\Tutorials\Robotframework\Tests\isDisable.robot">
-<test id="s1-t1" name="Verify Assess Button is Disabled for NAME = “BBB” and CLASS = “abc”" line="9">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-29T08:50:50.134308" rpa="false" schemaversion="5">
+<suite id="s1" name="signupTestcase" source="C:\Users\LENOVO\Desktop\Tutorials\Robotframework\Tests\signupTestcase.robot">
+<test id="s1-t1" name="TC-01 Verify the default page of sign up." line="34">
+<kw name="Open URL" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-01-29T00:58:16.946884" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5500/Tests/assess.html'.</msg>
-<arg>${URL}</arg>
+<msg time="2024-01-29T08:50:50.545489" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5500/Tests/index.html'.</msg>
+<arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-01-29T00:58:16.946884" elapsed="3.202297"/>
+<status status="PASS" start="2024-01-29T08:50:50.545489" elapsed="3.151040"/>
 </kw>
-<kw name="Checking “Assess” button that NAME = “BBB” and CLASS = “abc” is disabled">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Disabled" owner="SeleniumLibrary">
-<msg time="2024-01-29T00:58:20.381857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-01-29T00:58:20.381857" level="FAIL">Element 'xpath=//td[@class='table-user' and contains(text(),'BBB')]/following-sibling::td[@class='table-class' and contains(text(),'abc')]/following-sibling::td[@class='table-button']//button[@class='table-assess']' is enabled.</msg>
-<arg>${BBBAssessButtonXPath}</arg>
-<doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="FAIL" start="2024-01-29T00:58:20.152792" elapsed="0.233428">Element 'xpath=//td[@class='table-user' and contains(text(),'BBB')]/following-sibling::td[@class='table-class' and contains(text(),'abc')]/following-sibling::td[@class='table-button']//button[@class='table-assess']' is enabled.</status>
+<status status="PASS" start="2024-01-29T08:50:50.542022" elapsed="3.155506"/>
 </kw>
-<msg time="2024-01-29T00:58:20.387232" level="INFO">${isDisabled} = False</msg>
-<var>${isDisabled}</var>
-<arg>Element Should Be Disabled</arg>
-<arg>${BBBAssessButtonXPath}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-01-29T00:58:20.152792" elapsed="0.234440"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.749216" level="INFO">Current page contains element 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.698538" elapsed="0.051676"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-01-29T00:58:20.387232" level="INFO">Is Assess Button Disabled? False</msg>
-<arg>Is Assess Button Disabled? ${isDisabled}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-01-29T00:58:20.387232" elapsed="0.001310"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.786205" level="INFO">Current page contains element 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.750214" elapsed="0.036979"/>
 </kw>
-<status status="PASS" start="2024-01-29T00:58:20.151703" elapsed="0.236839"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.805677" level="INFO">Current page contains element 'id=industry-dropdown'.</msg>
+<arg>${industry_dropdown}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.787193" elapsed="0.018484"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.823465" level="INFO">Current page contains element 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.806692" elapsed="0.016773"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.840870" level="INFO">Current page contains element 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.823465" elapsed="0.018524"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.859142" level="INFO">Current page contains element 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.841989" elapsed="0.017153"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.877423" level="INFO">Current page contains element 'id=showpassword-checkbox'.</msg>
+<arg>${show_password_checkbox}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.860206" elapsed="0.017217"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.895458" level="INFO">Current page contains element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.878439" elapsed="0.018023"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:53.912794" level="INFO">Current page contains element 'id=signin-link'.</msg>
+<arg>${sign_in_link}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-29T08:50:53.896462" elapsed="0.016332"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-01-29T00:58:20.388542" elapsed="2.253545"/>
+<status status="PASS" start="2024-01-29T08:50:53.913805" elapsed="2.197779"/>
 </kw>
-<status status="PASS" start="2024-01-29T00:58:16.943877" elapsed="5.698210"/>
+<status status="PASS" start="2024-01-29T08:50:50.541001" elapsed="5.571600"/>
 </test>
-<status status="PASS" start="2024-01-29T00:58:16.526288" elapsed="6.117821"/>
+<test id="s1-t2" name="TC-02 Verify sign-up with only English characters and a length not exceeding 50 characters." line="48">
+<kw name="Open URL" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:56.116939" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5500/Tests/index.html'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T08:50:56.116939" elapsed="3.700010"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:50:56.115925" elapsed="3.702027"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:50:59.819954" level="INFO">Typing text 'Aithiya' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:50:59.819954" elapsed="0.247015"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:50:59.818947" elapsed="0.248022"/>
+</kw>
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:00.068986" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:00.067987" elapsed="0.180734"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:00.067987" elapsed="0.180734"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:00.251748" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:00.250744" elapsed="0.196507"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:00.249749" elapsed="0.197502"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:00.449747" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:00.448720" elapsed="0.283128"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:00.447251" elapsed="0.284597"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:00.733847" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:00.732851" elapsed="0.203763"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:00.732851" elapsed="0.203763"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:00.937691" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:00.937691" elapsed="0.193196"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:00.937691" elapsed="0.194199"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:01.133888" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:01.132887" elapsed="0.093812"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:01.132887" elapsed="0.094811"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-29T08:51:01.227698" elapsed="2.210672"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:50:56.114692" elapsed="7.324749"/>
+</test>
+<test id="s1-t3" name="TC-03 Verify sign-up for cases involving non-English characters, such as Thai, special characters, numbers, and data exceeding a length of 50 characters." line="58">
+<kw name="Open URL" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:03.442700" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5500/Tests/index.html'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T08:51:03.442700" elapsed="1.927633"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:03.442700" elapsed="1.927633"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:05.372525" level="INFO">Typing text 'อาทิติยา' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:05.372525" elapsed="0.245815"/>
+</kw>
+<arg>อาทิติยา</arg>
+<status status="PASS" start="2024-01-29T08:51:05.371335" elapsed="0.248127"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:05.620639" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:05.620639" elapsed="0.158297"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:05.619462" elapsed="0.159474"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:05.779946" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:05.778936" elapsed="0.153825"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:05.778936" elapsed="0.153825"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:05.933986" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:05.933986" elapsed="0.254550"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:05.932761" elapsed="0.255775"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:06.189898" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:06.189898" elapsed="0.203397"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:06.189898" elapsed="0.203397"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:06.393295" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:06.393295" elapsed="0.188777"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:06.393295" elapsed="0.188777"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:05.619462" elapsed="0.962610"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:06.584453" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:06.584453" elapsed="0.088263"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:06.583320" elapsed="0.089396"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:06.674811" level="INFO">Typing text 'Atithiya!' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:06.674811" elapsed="0.233098"/>
+</kw>
+<arg>Atithiya!</arg>
+<status status="PASS" start="2024-01-29T08:51:06.673799" elapsed="0.234110"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:06.910042" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:06.910042" elapsed="0.203373"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:06.909031" elapsed="0.204384"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:07.114583" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:07.113415" elapsed="0.080233"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:07.113415" elapsed="0.080233"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:07.193648" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:07.193648" elapsed="0.248648"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:07.193648" elapsed="0.248648"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:07.443710" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:07.442296" elapsed="0.214771"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:07.442296" elapsed="0.214771"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:07.658401" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:07.658401" elapsed="0.208251"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:07.657067" elapsed="0.209585"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:06.909031" elapsed="0.957621"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:07.867669" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:07.867669" elapsed="0.080343"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:07.867669" elapsed="0.080343"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:07.950111" level="INFO">Typing text 'Atithiya@1' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:07.949026" elapsed="0.234869"/>
+</kw>
+<arg>Atithiya@1</arg>
+<status status="PASS" start="2024-01-29T08:51:07.949026" elapsed="0.234869"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:08.184973" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:08.184973" elapsed="0.212971"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:08.184973" elapsed="0.214126"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:08.399099" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:08.399099" elapsed="0.075076"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:08.399099" elapsed="0.076220"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:08.476363" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:08.475319" elapsed="0.274220"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:08.475319" elapsed="0.274220"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:08.750850" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:08.749539" elapsed="0.206917"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:08.749539" elapsed="0.206917"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:08.957468" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:08.957468" elapsed="0.211600"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:08.957468" elapsed="0.212626"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:08.184973" elapsed="0.985121"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:09.171092" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:09.171092" elapsed="0.079296"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:09.171092" elapsed="0.079296"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:09.251563" level="INFO">Typing text 'Atithiya123' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:09.251563" elapsed="0.239364"/>
+</kw>
+<arg>Atithiya123</arg>
+<status status="PASS" start="2024-01-29T08:51:09.250388" elapsed="0.240539"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:09.491927" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:09.491927" elapsed="0.231892"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:09.491927" elapsed="0.231892"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:09.724839" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:09.724839" elapsed="0.074803"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:09.724839" elapsed="0.074803"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:09.800746" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:09.800746" elapsed="0.239162"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:09.799642" elapsed="0.240266"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:10.040962" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:10.040962" elapsed="0.229020"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:10.039908" elapsed="0.230074"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:10.271074" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:10.271074" elapsed="0.215948"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:10.271074" elapsed="0.215948"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:09.490927" elapsed="0.996095"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:10.489173" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:10.489173" elapsed="0.074818"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:10.488047" elapsed="0.075944"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:10.566850" level="INFO">Typing text 'Atithiya123' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:10.565475" elapsed="0.215060"/>
+</kw>
+<arg>Atithiya123</arg>
+<status status="PASS" start="2024-01-29T08:51:10.565475" elapsed="0.215060"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:10.781996" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:10.781996" elapsed="0.205117"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:10.781996" elapsed="0.206590"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:10.989604" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:10.989604" elapsed="0.075381"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:10.988586" elapsed="0.076399"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:11.066000" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:11.066000" elapsed="0.245622"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:11.064985" elapsed="0.246637"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:11.312894" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:11.312894" elapsed="0.220239"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:11.312894" elapsed="0.220239"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:11.534231" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:11.534231" elapsed="0.210034"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:11.534231" elapsed="0.210034"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:10.780535" elapsed="0.963730"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:11.745288" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:11.745288" elapsed="0.083868"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:11.744265" elapsed="0.084891"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:11.830175" level="INFO">Typing text '1234' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:11.830175" elapsed="0.206938"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-01-29T08:51:11.830175" elapsed="0.207948"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:12.040397" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:12.040397" elapsed="0.211053"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.039137" elapsed="0.212313"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:12.252950" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:12.252950" elapsed="0.071656"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.252950" elapsed="0.071656"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:12.326066" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:12.326066" elapsed="0.266405"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.326066" elapsed="0.266405"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:12.593492" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:12.593492" elapsed="0.212927"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.592471" elapsed="0.213948"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:12.806419" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:12.806419" elapsed="0.189739"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.806419" elapsed="0.189739"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.039137" elapsed="0.957021"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:12.997165" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:12.997165" elapsed="0.062614"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:12.996158" elapsed="0.063621"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.062192" level="INFO">Typing text '@#$%' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.061173" elapsed="0.154870"/>
+</kw>
+<arg>@#$%</arg>
+<status status="PASS" start="2024-01-29T08:51:13.061173" elapsed="0.154870"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.218086" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.217052" elapsed="0.171596"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.217052" elapsed="0.171596"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.388648" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.388648" elapsed="0.054133"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.388648" elapsed="0.054133"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.444212" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.444212" elapsed="0.176194"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.442781" elapsed="0.177625"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.621906" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.620406" elapsed="0.142862"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.620406" elapsed="0.142862"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.764281" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.763268" elapsed="0.148596"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.763268" elapsed="0.148596"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.217052" elapsed="0.694812"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.912969" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.912969" elapsed="0.052092"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:13.912969" elapsed="0.052092"/>
+</kw>
+<kw name="Input name in the name field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:13.966533" level="INFO">Typing text 'EleanorFitzgeraldJonathanAlexanderBartholomewMontas' into text field 'id=name-input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:13.966533" elapsed="0.263200"/>
+</kw>
+<arg>EleanorFitzgeraldJonathanAlexanderBartholomewMontas</arg>
+<status status="PASS" start="2024-01-29T08:51:13.965061" elapsed="0.264672"/>
+</kw>
+<kw name="Enter other data for verify name field">
+<kw name="Input surname in the surname field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:14.232029" level="INFO">Typing text 'Inthorn' into text field 'id=surname-input'.</msg>
+<arg>${surname_field}</arg>
+<arg>${surname_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:14.231019" elapsed="0.150384"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.231019" elapsed="0.150384"/>
+</kw>
+<kw name="Select industry dropdown">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:14.382575" level="INFO">Selecting options from selection list 'id=industry-dropdown' by label Technology.</msg>
+<arg>${industry_dropdown}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-01-29T08:51:14.382575" elapsed="0.060551"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.381403" elapsed="0.061723"/>
+</kw>
+<kw name="Input email in the email field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:14.444204" level="INFO">Typing text 'atithiya@email.com' into text field 'id=email-input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:14.443126" elapsed="0.186743"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.443126" elapsed="0.186743"/>
+</kw>
+<kw name="Input password in the password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:14.630864" level="INFO">Typing text 'Mika@1234' into text field 'id=password-input'.</msg>
+<arg>${password_field}</arg>
+<arg>${password_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:14.630864" elapsed="0.190882"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.629869" elapsed="0.191877"/>
+</kw>
+<kw name="Input confirm password in confirm password field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:14.823152" level="INFO">Typing text 'Mika@1234' into text field 'id=confirmpassword-input'.</msg>
+<arg>${confirm_password_field}</arg>
+<arg>${confirmpassword_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:14.823152" elapsed="0.171254"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.823152" elapsed="0.171254"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.231019" elapsed="0.763387"/>
+</kw>
+<kw name="Click on sign up button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T08:51:14.995905" level="INFO">Clicking element 'id=signup-button'.</msg>
+<arg>${sign_up_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T08:51:14.995905" elapsed="0.064228"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:14.994406" elapsed="0.065727"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-29T08:51:15.060133" elapsed="2.203842"/>
+</kw>
+<status status="PASS" start="2024-01-29T08:51:03.441631" elapsed="13.823367"/>
+</test>
+<doc>Test Suite for Sign Up Functionality</doc>
+<status status="PASS" start="2024-01-29T08:50:50.139836" elapsed="27.126643"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="isDisable">isDisable</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="signupTestcase">signupTestcase</stat>
 </suite>
 </statistics>
 <errors>
